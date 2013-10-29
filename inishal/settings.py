@@ -122,7 +122,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_PATH, "templates"),
 )
-print TEMPLATE_DIRS
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -167,3 +167,9 @@ LOGGING = {
         },
     }
 }
+
+# try to import local_settings
+try:
+    from local_settings import *
+except ImportError:
+    pass
