@@ -61,6 +61,10 @@ USE_TZ = True
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
 
+# ckeditor upload path
+CKEDITOR_UPLOAD_PATH = os.path.join(PROJECT_PATH, "media")
+PHOTOLOGUE_USE_CKEDITOR = True
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
@@ -140,7 +144,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'inishal',
+    'ckeditor',
     'photologue',
+    'tagging',
     'south',
 )
 

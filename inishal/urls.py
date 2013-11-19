@@ -18,8 +18,13 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
+    # console area
+    #(r'^console/accounts/login/$', 'django.contrib.auth.views.login', {'template_name': 'loginconsole.html'}),
+    (r'^console/', include('console.urls')),
+
     (r'^photologue/', include('photologue.urls')),
 
+    (r'^ckeditor/', include('ckeditor.urls')),
 )
 
 if settings.DEBUG:
